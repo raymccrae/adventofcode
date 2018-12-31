@@ -94,6 +94,15 @@ loop	jsr CHRIN			; Call Kernal routine CHRIN
 		clc
 		adc current
 		sta current
+		lda current + 1
+		adc #$00
+		sta current + 1
+		lda current + 2
+		adc #$00
+		sta current + 2
+		lda current + 3
+		adc #$00
+		sta current + 3
 		
 		jmp loop
 		
